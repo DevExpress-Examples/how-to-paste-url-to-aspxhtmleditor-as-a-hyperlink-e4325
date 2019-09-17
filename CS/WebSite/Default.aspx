@@ -32,7 +32,7 @@
                 process = -1;
                 var text = s.GetHtml();
                 s.SetHtml("");
-                var newText = text.replace(/(?:(https?:\/\/[\/\w\.\,\-\?\=\&\%\+\#\&&amp;]*[^&lt;^&lt;a\s^\)]\/?))(?=<br>|<\/div>|$|\)|\s|\))/g, "<a href=\"$1\">$1</a>");
+                var newText = text.replace(/(?:(https?:\/\/[\/\w\.\,\-\?\=\&\%\+\#\&&amp;]*[^&lt;^&lt;a\s^\)]\/?))(?=<br>|\&nbsp|<\/div>|$|\)|\s|\))/g, "<a href=\"$1\">$1</a>");
                 s.ExecuteCommand(ASPxClientCommandConsts.PASTEHTML_COMMAND, newText);
             }
         }
